@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    /* --img-header: url(''); */
+    --color-primary: #ff00ff;
+    --color-secondary: #ff0000;
+}
+
+.dark {
+    --color-primary: #0000ff;
+    --color-secondary: #ff0000;
+}
