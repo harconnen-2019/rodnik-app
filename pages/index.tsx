@@ -15,7 +15,7 @@ const Home: NextPage = () => {
             </Head>
 
             <h1 className="text-3xl font-bold underline dark text-primary">
-                Welcome hello ! to <a href="https://nextjs.org">Next.js!</a>
+                Welcome hello 222 ! to <a href="https://nextjs.org">Next.js!</a>
             </h1>
         </>
     );
