@@ -14,9 +14,9 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <h1 className="text-3xl font-bold underline dark text-primary">
-                Welcome hello 222 ! to <a href="https://nextjs.org">Next.js!</a>
-            </h1>
+            {/*<h1 className="text-3xl font-bold underline text-primary">*/}
+            {/*    Welcome hello 222 ! to <a href="https://nextjs.org">Next.js!</a>*/}
+            {/*</h1>*/}
         </>
     );
 };

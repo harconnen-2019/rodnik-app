@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 :root {
-    /* --img-header: url(''); */
+    --header-bg: url('../public/static/img/theme-01.jpg');
+    --logo-white: url('../public/static/img/logo.png');
+    --color-bg-logo: rgb(0 80 135 / 0.8);
     --color-primary: #ff00ff;
     --color-secondary: #ff0000;
 }

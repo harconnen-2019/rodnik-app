@@ -9,6 +9,6 @@ describe('Home', () => {
             name: /welcome hello 222 ! to next\.js!/i,
         });
 
-        expect(heading).toBeInTheDocument;
+        expect(heading).toBeInTheDocument();
     });
 });
