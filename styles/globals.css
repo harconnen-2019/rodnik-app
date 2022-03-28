@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
     --header-bg: url('../public/static/img/theme-01.jpg');
     --logo-white: url('../public/static/img/logo.png');
