@@ -9,6 +9,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         typeof window !== 'undefined' ? localStorage.theme : 'light'
     );
 
+    //TODO: Допаботать тему с учетом браузера
+    // window.matchMedia('(prefers-color-scheme: dark)').matches
+
     console.log(VERSION);
 
     /**

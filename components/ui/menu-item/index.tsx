@@ -18,16 +18,29 @@ const MenuItem: FC<IMenuItem> = ({
         styleItem = [...styleItem, 'hidden', 'md:block'];
     }
 
+    //TODO: Добавить изменения при наведении на меню
+
     /* Стили круглой кнопки */
     let styleNav: string[] = [
-        'rounded-full bg-menu-circle-light dark:bg-menu-circle-dark w-16 h-16 md:w-24 md:h-24',
+        'rounded-full bg-l-menu-circle dark:bg-d-menu-circle',
+        'w-16 h-16 md:w-24 md:h-24',
         'flex justify-center item-center',
+    ];
+    /* Стили иконки */
+    let styleFill: string[] = [
+        'fill-l-menu-svg dark:fill-d-menu-svg w-10 md:w-14',
+    ];
+    /* Стили текста под иконкой */
+    let styleText: string[] = [
+        'text-l-menu-text dark:text-d-menu-text text-center mt-3 text-sm md:text-lg font-display',
     ];
     /* Подсветка активной кнопки */
     if (router.asPath === href) {
-        styleNav = [
-            ...styleNav,
-            'bg-menu-svg-light-active dark:bg-menu-svg-dark-active',
+        styleNav = [...styleNav, 'bg-l-a-menu-circle dark:bg-d-a-menu-circle'];
+        styleFill = [...styleFill, 'dark:fill-d-a-menu-svg'];
+        styleText = [
+            ...styleText,
+            'text-l-a-menu-circle dark:text-d-a-menu-svg',
         ];
     }
 
@@ -38,13 +51,11 @@ const MenuItem: FC<IMenuItem> = ({
                 <a>
                     <div className="flex flex-col items-center">
                         <div className={styleNav.join(' ')}>
-                            <svg className="fill-menu-svg-light dark:fill-menu-svg-dark w-10 md:w-14">
+                            <svg className={styleFill.join(' ')}>
                                 <use xlinkHref={`#${idSvgIcon}`} />
                             </svg>
                         </div>
-                        <div className="text-menu-text-light dark:text-menu-text-dark text-center mt-3 text-xs md:text-sm">
-                            {children}
-                        </div>
+                        <div className={styleText.join(' ')}>{children}</div>
                     </div>
                 </a>
             </Link>

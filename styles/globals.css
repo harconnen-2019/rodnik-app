@@ -4,16 +4,16 @@
 
 :root {
     --hue: 200; /* Blue */
-    --accent-hue: 25;
+    --accent-hue: 160;
 
     /* фон старниц сайта */
     --d-page: rgb(1 16 22);
 
     /* Коллаж */
-    --img-light: url('../public/static/img/winter-morning-full.jpg');
-    --img-light-mobile: url('../public/static/img/winter-morning-mobile.jpg');
-    --img-dark: url('../public/static/img/winter-evening-full.jpg');
-    --img-dark-mobile: url('../public/static/img/winter-evening-mobile.jpg');
+    --l-img: url('../public/static/img/winter-morning-full.jpg');
+    --l-m-img: url('../public/static/img/winter-morning-mobile.jpg');
+    --d-img: url('../public/static/img/winter-evening-full.jpg');
+    --d-m-img: url('../public/static/img/winter-evening-mobile.jpg');
 
     --l-toggle-theme: hsla(var(--hue), 98%, 39%, 0.5);
     --l-h-toggle-theme: hsla(var(--hue), 89%, 48%, 0.5);
@@ -22,22 +22,20 @@
     --d-toggle-svg: hsl(var(--hue), 94%, 86%);
 
     /* цвет круглого фона для логотипа и картинка логотипа */
-    --circle-logo-light: rgb(0 80 135 / 0.8);
-    --circle-logo-dark: rgb(0 80 135 / 0.8);
-    --logo-light: url('../public/static/img/logo.png');
-    --logo-dark: url('../public/static/img/logo.png');
+    --l-logo-circle: hsla(var(--hue), 98%, 39%, 0.8);
+    --d-logo-circle: hsla(var(--hue), 90%, 27%, 0.8);
 
     /* Меню */
-    --menu-circle-light: rgb(108 192 230 / 0.5); /* цвет круглого фона кнопки меню */
-    --menu-svg-light: white; /* цвет иконки меню */
-    --menu-svg-light-active: rgb(0 80 135); /* цвет иконки меню */
-    --menu-text-light: #333; /* цвет текста меню */
+    --l-menu-circle: hsla(var(--hue), 98%, 39%, 0.5); /* цвет круглого фона кнопки меню */
+    --l-a-menu-circle: hsla(var(--accent-hue), 84%, 39%, 0.6); /* цвет иконки меню */
+    --l-menu-svg: white; /* цвет иконки меню */
+    --l-menu-text: rgb(107 114 128); /* цвет текста меню */
 
-    --menu-circle-dark: rgb(108 192 230 / 0.5); /* цвет круглого фона кнопки меню */
-    --menu-svg-dark: white; /* цвет иконки меню */
-    --menu-svg-dark-active: rgb(0 80 135); /* цвет иконки меню */
-    --menu-text-dark: #333; /* цвет текста меню */
-
+    --d-menu-circle: hsla(var(--hue), 94%, 46%, 0.2); /* цвет круглого фона кнопки меню */
+    --d-a-menu-circle: hsla(var(--accent-hue), 84%, 39%, 0.3); /* цвет иконки меню */
+    --d-menu-svg: hsl(var(--hue), 94%, 86%); /* цвет иконки меню */
+    --d-a-menu-svg: hsla(var(--accent-hue), 84%, 39%, 1);
+    --d-menu-text: hsl(var(--hue), 94%, 86%); /* цвет текста меню */
 }
 
 
