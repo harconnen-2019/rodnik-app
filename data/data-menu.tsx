@@ -1,45 +1,45 @@
-import { IMenu } from '../../../models/menu';
+import { IMenu } from '../models/i-menu';
 
-export const menu: IMenu[] = [
+export const dataMenu: IMenu[] = [
     {
         name: 'О нас',
-        idSvgIcon: 'favorites',
+        idSvgIcon: 'about',
         href: '/about',
     },
     {
         name: 'Номера',
-        idSvgIcon: 'favorites',
+        idSvgIcon: 'nomera',
         href: '/nomera',
     },
     {
         name: 'Лечение',
-        idSvgIcon: 'favorites',
+        idSvgIcon: 'med',
         href: '/lechenie',
     },
     {
         name: 'Питание',
-        idSvgIcon: 'favorites',
+        idSvgIcon: 'kuhnya',
         href: '/kuhnya',
     },
     {
         name: 'Досуг',
-        idSvgIcon: 'genres',
+        idSvgIcon: 'dosug',
         href: '/dosug',
     },
     {
         name: 'Цены',
-        idSvgIcon: 'genres',
+        idSvgIcon: 'price',
         href: '/price',
         // hiddenMobile: true,
     },
     {
         name: 'Документы',
-        idSvgIcon: 'genres',
+        idSvgIcon: 'docs',
         href: '/documents',
     },
     {
         name: 'Контакты',
-        idSvgIcon: 'genres',
+        idSvgIcon: 'contacts',
         href: '/contacts',
     },
 ];

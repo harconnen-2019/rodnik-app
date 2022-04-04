@@ -8,14 +8,14 @@ export const NAME_COMPANY: string = 'ЛПУП Санаторий «РОДНИК�
 export const PRIMARY_PHONE: string = '+7(800)2008777';
 
 export const SECONDARY_PHONE: string[] = [
-    '8(8793)301783',
-    '8(8793)301781',
-    '8(8793)301338',
+    '+7(8793)301783',
+    '+7(8793)301781',
+    '+7(8793)301338',
 ];
 
 export const EMAIL: string = 'rodnik.manager@profkurort.ru';
 
-export const ADRESS: string =
+export const ADDRESS: string =
     'Ставропольский край, 357500, г. Пятигорск бульвар Гагарина, 21';
 
 export const SOC: {} = {

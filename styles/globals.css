@@ -2,16 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-    --header-bg: url('../public/static/img/theme-01.jpg');
-    --logo-white: url('../public/static/img/logo.png');
-    --color-bg-logo: rgb(0 80 135 / 0.8);
-    --color-primary: #ff00ff;
-    --color-secondary: #ff0000;
+    --hue: 200; /* Blue */
+    --accent-hue: 25;
+
+    /* фон старниц сайта */
+    --d-page: rgb(1 16 22);
+
+    /* Коллаж */
+    --img-light: url('../public/static/img/winter-morning-full.jpg');
+    --img-light-mobile: url('../public/static/img/winter-morning-mobile.jpg');
+    --img-dark: url('../public/static/img/winter-evening-full.jpg');
+    --img-dark-mobile: url('../public/static/img/winter-evening-mobile.jpg');
+
+    --l-toggle-theme: hsla(var(--hue), 98%, 39%, 0.5);
+    --l-h-toggle-theme: hsla(var(--hue), 89%, 48%, 0.5);
+    --d-toggle-theme: hsla(var(--hue), 90%, 27%, 0.5);
+    --d-h-toggle-theme: hsla(var(--hue), 80%, 24%, 0.5);
+    --d-toggle-svg: hsl(var(--hue), 94%, 86%);
+
+    /* цвет круглого фона для логотипа и картинка логотипа */
+    --circle-logo-light: rgb(0 80 135 / 0.8);
+    --circle-logo-dark: rgb(0 80 135 / 0.8);
+    --logo-light: url('../public/static/img/logo.png');
+    --logo-dark: url('../public/static/img/logo.png');
+
+    /* Меню */
+    --menu-circle-light: rgb(108 192 230 / 0.5); /* цвет круглого фона кнопки меню */
+    --menu-svg-light: white; /* цвет иконки меню */
+    --menu-svg-light-active: rgb(0 80 135); /* цвет иконки меню */
+    --menu-text-light: #333; /* цвет текста меню */
+
+    --menu-circle-dark: rgb(108 192 230 / 0.5); /* цвет круглого фона кнопки меню */
+    --menu-svg-dark: white; /* цвет иконки меню */
+    --menu-svg-dark-active: rgb(0 80 135); /* цвет иконки меню */
+    --menu-text-dark: #333; /* цвет текста меню */
+
 }
 
-.dark {
-    --color-primary: #0000ff;
-    --color-secondary: #ff0000;
-}
+
+
