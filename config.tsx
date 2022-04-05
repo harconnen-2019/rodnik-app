@@ -8,9 +8,9 @@ export const NAME_COMPANY: string = 'ЛПУП Санаторий «РОДНИК�
 export const PRIMARY_PHONE: string = '+7(800)2008777';
 
 export const SECONDARY_PHONE: string[] = [
-    '+7(8793)301783',
-    '+7(8793)301781',
-    '+7(8793)301338',
+    '+7(8793)30-17-83',
+    '+7(8793)30-17-81',
+    '+7(8793)30-13-38',
 ];
 
 export const EMAIL: string = 'rodnik.manager@profkurort.ru';
