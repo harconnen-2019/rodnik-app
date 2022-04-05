@@ -30,7 +30,7 @@ const Home: NextPage = () => {
             </p>
             <p>Круглогодично возможно лечение и отдых родителей с детьми.</p>
             <p>Питание и лечение включено</p>
-            <Nomer href={dataNomera[0]} nomer={dataNomera[0]} />
+            <Nomer href={dataNomera[3]} nomer={dataNomera[0]} />
             {/*<h1 className="text-3xl font-bold underline text-primary">*/}
             {/*    Welcome hello 222 ! to <a href="https://nextjs.org">Next.js!</a>*/}
             {/*</h1>*/}

@@ -6,13 +6,12 @@ import { INomer } from '../../models/i-nomer';
 
 type Props = {
     nomer: INomer;
-    href: INomer;
 };
 
 const Nomer: FC<Props> = ({ nomer }) => {
     return (
         <>
-            <Link href={nomer.href}>
+            <Link href={`/nomera/${nomer.href}`}>
                 <a>
                     <div className="relative shadow-xl  rounded-2xl hover:shadow-2xl transition duration-300 ease-in-out ">
                         <Image
