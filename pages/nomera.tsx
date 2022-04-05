@@ -18,9 +18,11 @@ const Nomera: NextPage = () => {
                 />
             </Head>
             <h1>Номерной фонд санатория</h1>
-            {dataNomera.map((nomer) => (
-                <Nomer key={nomer.id} nomer={nomer} />
-            ))}
+            <div className="lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid gap-3">
+                {dataNomera.map((nomer) => (
+                    <Nomer key={nomer.id} nomer={nomer} />
+                ))}
+            </div>
         </>
     );
 };
