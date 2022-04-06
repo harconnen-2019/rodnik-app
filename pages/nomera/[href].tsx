@@ -6,9 +6,9 @@ const Href: FC = () => {
     const router = useRouter();
     const { href } = router.query;
 
-    const nomer = dataNomera.filter((item) => item.href === href);
+    const nomer = dataNomera.find((item) => item.href === href);
 
-    return <div>Проверка - {nomer.map((item) => item.name)}</div>;
+    return <div>Проверка - {nomer && nomer.name}</div>;
 };
 
 export default Href;

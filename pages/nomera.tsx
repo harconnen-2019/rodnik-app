@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { PRIMARY_PHONE } from '../config';
-import { dataNomera } from '../data/data-nomera';
-import Nomer from '../components/nomer';
-import Title from '../components/ui/title';
+import { dataNomera } from '@/data/data-nomera';
+import Nomer from '@/components/nomer';
+import Title from '@/components/ui/title';
 
 const Nomera: NextPage = () => {
     return (

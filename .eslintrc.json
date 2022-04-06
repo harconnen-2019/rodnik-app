@@ -1,8 +1,17 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "eslint:recommended",
+//    "eslint:recommended",
     "prettier"
+  ],
+  "overrides": [
+    // Next.js needs default exports for pages and API points
+    {
+      "files": ["pages/*", "pages/api/*"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
   ],
   "env": {
     "jest": true
