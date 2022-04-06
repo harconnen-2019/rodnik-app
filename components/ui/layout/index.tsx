@@ -1,10 +1,14 @@
 import { Dispatch, FC } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import MenuItem from '../menu-item';
 import SvgSlice from './svg-slice';
-import { dataMenu } from '../../../data/data-menu';
+import { dataMenu } from '@/data/data-menu';
 import Footer from '../footer';
-import ButtonThemeToggle from '../button-theme-toggle';
+
+const ButtonThemeToggle = dynamic(() => import('../button-theme-toggle'), {
+    ssr: false,
+});
 
 type Props = {
     theme: string;
@@ -13,6 +17,7 @@ type Props = {
 
 const Layout: FC<Props> = ({ children, theme, setTheme }) => {
     if (!children) return null;
+
     return (
         <>
             <header className="bg-l-m-img sm:bg-l-img dark:bg-d-m-img dark:sm:bg-d-img bg-center bg-cover w-100 h-80 md:h-550 lg:h-628">

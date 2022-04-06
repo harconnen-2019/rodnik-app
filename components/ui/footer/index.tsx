@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import { IMenu } from '../../../models/i-menu';
+import { IMenu } from '@/models/i-menu';
 import {
     NAME_COMPANY,
     PRIMARY_PHONE,
@@ -14,7 +14,7 @@ type Props = {
 
 const Footer: FC<Props> = ({ menu }) => {
     return (
-        <footer className="container mt-24 hidden lg:block pb-10 border-t border-l-logo-circle dark:border-d-logo-circle pt-10 opacity-70">
+        <footer className="container mt-24 hidden lg:block pb-10 border-t border-l-logo-circle dark:border-d-logo-circle pt-10 opacity-80 tracking-wide">
             <div className="grid grid-cols-2">
                 <div>
                     <div className="mb-3">

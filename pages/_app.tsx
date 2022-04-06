@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         typeof window !== 'undefined' ? localStorage.theme : 'light'
     );
 
-    //TODO: Допаботать тему с учетом браузера
+    //TODO: Допаботать тему с учетом браузера (Убрать моргание если тема темная)
     // window.matchMedia('(prefers-color-scheme: dark)').matches
 
     console.log(VERSION);

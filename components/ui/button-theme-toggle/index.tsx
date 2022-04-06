@@ -1,10 +1,9 @@
 import { Dispatch, FC } from 'react';
+
 type Props = {
     theme: string;
     setTheme: Dispatch<string>;
 };
-
-//FIXME: При первом запуске иконка всегда светлой темы
 
 const ButtonThemeToggle: FC<Props> = ({ theme, setTheme }) => {
     // if (!theme) return null;
