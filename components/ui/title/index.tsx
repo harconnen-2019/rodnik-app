@@ -1,6 +1,10 @@
 import { FC } from 'react';
 
-const Title: FC = ({ children }) => {
+type Props = {
+    children: string;
+};
+
+const Title: FC<Props> = ({ children }) => {
     if (!children) return null;
     return (
         <>
