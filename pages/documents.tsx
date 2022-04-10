@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { PRIMARY_PHONE } from '../config';
+import Title from '@/components/ui/title';
 
 const Documents: NextPage = () => {
     return (
@@ -15,7 +16,7 @@ const Documents: NextPage = () => {
                     content={`Документы для заезда в Санаторий, курортный отдых в лечебно-профилактическом санаторий «РОДНИК» по низким ценам в Пятигорске. Наш телефон: ${PRIMARY_PHONE}`}
                 />
             </Head>
-            <h1>Документы для заезда в санаторий</h1>
+            <Title>Документы для заезда в санаторий</Title>
         </>
     );
 };
