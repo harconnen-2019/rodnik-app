@@ -1,14 +1,13 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { IMenuItem } from '../../../models/i-menu';
+import { IMenuItem } from '@/models/i-menu';
 
-const MenuItem: FC<IMenuItem> = ({
-    children,
-    idSvgIcon,
-    href,
-    hiddenMobile,
-}) => {
+interface Props extends IMenuItem {
+    children: string;
+}
+
+const MenuItem: FC<Props> = ({ children, idSvgIcon, href, hiddenMobile }) => {
     const router = useRouter();
 
     /* Стили блока кнопки */

@@ -13,6 +13,7 @@ const ButtonThemeToggle = dynamic(() => import('../button-theme-toggle'), {
 type Props = {
     theme: string;
     setTheme: Dispatch<string>;
+    children: JSX.Element;
 };
 
 const Layout: FC<Props> = ({ children, theme, setTheme }) => {
