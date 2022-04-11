@@ -8,11 +8,7 @@ export class ThemeSite {
         const mql = window.matchMedia(
             `(prefers-color-scheme: ${ThemeName.DARK})`
         );
-        const hasPreference = typeof mql.matches === 'boolean';
-
-        if (hasPreference) {
-            return mql.matches ? ThemeName.DARK : ThemeName.LIGHT;
-        }
+        return mql.matches ? ThemeName.DARK : ThemeName.LIGHT;
     };
 
     static storeUserSetPreference = (pref: string) => {

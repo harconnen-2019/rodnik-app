@@ -8,11 +8,11 @@ function setInitialColorMode() {
     function getSeason() {
         let result;
         switch (new Date().getMonth()) {
-            case 0:
-            case 1:
-            case 11:
-                result = 'winter';
-                break;
+            // case 0:
+            // case 1:
+            // case 11:
+            //     result = 'winter';
+            //     break;
             case 2:
             case 3:
             case 4:
@@ -34,9 +34,6 @@ function setInitialColorMode() {
         return result;
     }
 
-    /**
-     * Выбрать темную или светлую тему
-     */
     function getInitialColorMode() {
         /**
          * Если пользователь явно выбрал светлое или темное,
@@ -45,39 +42,23 @@ function setInitialColorMode() {
         const preference = window.localStorage.getItem('theme');
         const hasExplicitPreference = typeof preference === 'string';
 
-        if (hasExplicitPreference) {
-            console.log('Storage', preference);
-            return preference;
-        }
+        if (hasExplicitPreference) return preference;
 
         // Если нет сохраненных предпочтений, используется медиа-запрос
-        const mql = window.matchMedia('(prefers-color-scheme: dark)');
-
-        const hasImplicitPreference = typeof mql.matches === 'boolean';
-        if (hasImplicitPreference) {
-            return mql.matches ? 'dark' : 'light';
-        }
-
         // По умолчанию 'light'.
-        return 'light';
+        const mql = window.matchMedia('(prefers-color-scheme: dark)');
+        return mql.matches ? 'dark' : 'light';
     }
     // Создаем HTML атрибут с текущим сезоном
     const themeSeason = getSeason();
     document.documentElement.classList.add(`theme-${themeSeason}`);
 
     // Создаем HTML атрибут если dark режим
-    const colorMode = getInitialColorMode();
-    if (colorMode === 'dark') {
+    if (getInitialColorMode() === 'dark') {
         document.documentElement.classList.add('dark');
-        // document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
     }
 }
-
-const blockingSetInitialColorMode = `(function() {
-	${setInitialColorMode.toString()}
-	setInitialColorMode();
-})()
-`;
 
 export default function Document() {
     return (
@@ -92,7 +73,10 @@ export default function Document() {
             <body className="bg-white dark:bg-d-page text-slate-700 dark:text-slate-400">
                 <script
                     dangerouslySetInnerHTML={{
-                        __html: blockingSetInitialColorMode,
+                        __html: `(function() {
+	                                ${setInitialColorMode.toString()}
+                                    setInitialColorMode();
+                                })()`,
                     }}
                 />
                 <Main />
