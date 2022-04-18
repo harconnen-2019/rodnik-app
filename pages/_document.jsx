@@ -5,14 +5,9 @@ function setInitialColorMode() {
      * Создать стиль сайта (времена года) в зависимости от месяца
      * Вабрать одну из 4 тем сайта
      */
-    function getSeason() {
+    const themeSeason = (function () {
         let result;
         switch (new Date().getMonth()) {
-            // case 0:
-            // case 1:
-            // case 11:
-            //     result = 'winter';
-            //     break;
             case 2:
             case 3:
             case 4:
@@ -32,7 +27,7 @@ function setInitialColorMode() {
                 result = 'winter';
         }
         return result;
-    }
+    })();
 
     function getInitialColorMode() {
         /**
@@ -50,7 +45,6 @@ function setInitialColorMode() {
         return mql.matches ? 'dark' : 'light';
     }
     // Создаем HTML атрибут с текущим сезоном
-    const themeSeason = getSeason();
     document.documentElement.classList.add(`theme-${themeSeason}`);
 
     // Создаем HTML атрибут если dark режим

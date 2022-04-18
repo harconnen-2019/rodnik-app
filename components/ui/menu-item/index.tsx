@@ -11,7 +11,7 @@ const MenuItem: FC<Props> = ({ children, idSvgIcon, href, hiddenMobile }) => {
     const router = useRouter();
 
     /* Стили блока кнопки */
-    let styleItem: string[] = ['m-3'];
+    let styleItem: string[] = ['w-full md:w-11/12'];
     /* Проверка показывать ли кнопку на мобильном */
     if (hiddenMobile) {
         styleItem = [...styleItem, 'hidden', 'md:block'];
@@ -21,17 +21,17 @@ const MenuItem: FC<Props> = ({ children, idSvgIcon, href, hiddenMobile }) => {
 
     /* Стили круглой кнопки */
     let styleNav: string[] = [
-        'rounded-full bg-l-menu-circle dark:bg-d-menu-circle',
-        'w-16 h-16 md:w-24 md:h-24',
-        'flex justify-center item-center',
+        'rounded-xl md:rounded-3xl bg-l-menu-circle dark:bg-d-menu-circle',
+        'w-full  md:w-full ',
+        'pt-4 pb-4 shadow-lg',
     ];
     /* Стили иконки */
     let styleFill: string[] = [
-        'fill-l-menu-svg dark:fill-d-menu-svg w-10 md:w-14',
+        'fill-l-menu-svg dark:fill-d-menu-svg w-10 h-10 md:w-14 md:h-14 m-auto',
     ];
     /* Стили текста под иконкой */
     let styleText: string[] = [
-        'text-l-menu-text dark:text-d-menu-text text-center mt-3 text-sm md:text-lg font-display',
+        'text-l-menu-text dark:text-d-menu-text mt-1 text-sm md:text-lg text-center font-display',
     ];
     /* Подсветка активной кнопки */
     if (router.asPath === href) {
@@ -48,12 +48,10 @@ const MenuItem: FC<Props> = ({ children, idSvgIcon, href, hiddenMobile }) => {
         <div className={styleItem.join(' ')}>
             <Link href={href} passHref>
                 <a>
-                    <div className="flex flex-col items-center">
-                        <div className={styleNav.join(' ')}>
-                            <svg className={styleFill.join(' ')}>
-                                <use xlinkHref={`#${idSvgIcon}`} />
-                            </svg>
-                        </div>
+                    <div className={styleNav.join(' ')}>
+                        <svg className={styleFill.join(' ')}>
+                            <use xlinkHref={`#${idSvgIcon}`} />
+                        </svg>
                         <div className={styleText.join(' ')}>{children}</div>
                     </div>
                 </a>

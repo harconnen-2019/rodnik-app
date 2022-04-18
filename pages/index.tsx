@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { NAME_COMPANY, PRIMARY_PHONE } from '../config';
+import { Sanatorium } from '@/lib/config';
 import Nomer from '../components/nomer';
 import { dataNomera } from '@/data/data-nomera';
 // import Image from 'next/image';
@@ -10,11 +10,11 @@ const Home: NextPage = () => {
         <>
             <Head>
                 <title>
-                    {NAME_COMPANY} Официальный сайт. Санаторное лечение
+                    {Sanatorium.orgName} Официальный сайт. Санаторное лечение
                 </title>
                 <meta
                     name="description"
-                    content={`Предлагаем Вам качественный курортный отдых в ${NAME_COMPANY} по приемлемым ценам. Наш телефон: ${PRIMARY_PHONE}`}
+                    content={`Предлагаем Вам качественный курортный отдых в ${Sanatorium.orgFullName} по приемлемым ценам. Наш телефон: ${Sanatorium.orgPhone}`}
                 />
             </Head>
             <h2 className="font-display text-4xl">

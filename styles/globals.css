@@ -22,8 +22,8 @@
     --d-toggle-svg: hsl(var(--hue), 94%, 86%);
 
     /* цвет круглого фона для логотипа и картинка логотипа */
-    --l-logo-circle: hsla(var(--hue), 98%, 39%, 0.8);
-    --d-logo-circle: hsla(var(--hue), 90%, 27%, 0.8);
+    --l-logo-circle: hsla(var(--hue), 98%, 39%, 0.3);
+    --d-logo-circle: hsla(var(--hue), 90%, 27%, 0.3);
 
     /* Меню */
     --l-menu-circle: hsla(var(--hue), 98%, 39%, 0.5); /* цвет круглого фона кнопки меню */

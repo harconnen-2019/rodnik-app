@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { PRIMARY_PHONE } from '../config';
+import { Sanatorium } from '@/lib/config';
 import { dataNomera } from '@/data/data-nomera';
 import Nomer from '@/components/nomer';
 import Title from '@/components/ui/title';
@@ -15,7 +15,7 @@ const Nomera: NextPage = () => {
                 </title>
                 <meta
                     name="description"
-                    content={`Номерной фонд, курортный отдых в лечебно-профилактическом санаторий «РОДНИК» по низким ценам в Пятигорске. Наш телефон: ${PRIMARY_PHONE}`}
+                    content={`Номерной фонд, курортный отдых в ${Sanatorium.orgFullName} по низким ценам в Пятигорске. Наш телефон: ${Sanatorium.orgPhone}`}
                 />
             </Head>
             <Title>Номерной фонд санатория</Title>

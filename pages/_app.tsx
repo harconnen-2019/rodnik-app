@@ -2,7 +2,7 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { useEffect, useState } from 'react';
 import Layout from '@/components/ui/layout';
-import { VERSION } from '../config';
+import { VERSION } from '@/lib/config';
 import { ThemeName, ThemeSite } from '@/lib/functions';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -10,7 +10,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         typeof window !== 'undefined' ? localStorage.theme : undefined
     );
     console.log(VERSION);
-    // console.log({ theme });
 
     /**
      * Проверить выбранную тему сайта

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { PRIMARY_PHONE } from '../config';
+import { Sanatorium } from '@/lib/config';
 import Title from '@/components/ui/title';
 
 const Lechenie: NextPage = () => {
@@ -13,7 +13,7 @@ const Lechenie: NextPage = () => {
                 </title>
                 <meta
                     name="description"
-                    content={`Лечение в Пятигорске, курортный отдых в лечебно-профилактическом санаторий «РОДНИК» по низким ценам в Пятигорске. Наш телефон: ${PRIMARY_PHONE}`}
+                    content={`Лечение в Пятигорске, курортный отдых в ${Sanatorium.orgFullName} по низким ценам в Пятигорске. Наш телефон: ${Sanatorium.orgPhone}`}
                 />
             </Head>
             <Title>Лечение в санатории</Title>

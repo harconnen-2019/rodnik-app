@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { NAME_COMPANY, PRIMARY_PHONE } from '../config';
+import { Sanatorium } from '@/lib/config';
 import Title from '@/components/ui/title';
 
 const Policy: NextPage = () => {
@@ -8,11 +8,12 @@ const Policy: NextPage = () => {
         <>
             <Head>
                 <title>
-                    {NAME_COMPANY} Официальный сайт. Политика конфиденциальности
+                    {Sanatorium.orgName} Официальный сайт. Политика
+                    конфиденциальности
                 </title>
                 <meta
                     name="description"
-                    content={`Предлагаем Вам качественный курортный отдых в ${NAME_COMPANY} по приемлемым ценам. Наш телефон: ${PRIMARY_PHONE}`}
+                    content={`Предлагаем Вам качественный курортный отдых в ${Sanatorium.orgFullName} по приемлемым ценам. Наш телефон: ${Sanatorium.orgPhone}`}
                 />
             </Head>
             <Title>Политика конфиденциальности</Title>
